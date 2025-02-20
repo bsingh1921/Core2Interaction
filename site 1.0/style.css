@@ -1,0 +1,82 @@
+
+body {
+    display: flex;
+    font-family: "Lucida Console", monospace;
+    font-size: clamp(8px, 1vw, 13px);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    overflow-y:hidden;
+}
+
+.poem {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+}
+
+.stanza a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.stanza a:hover {
+    text-decoration: underline;
+}
+
+.stanza {
+    text-align: justify;
+    word-wrap: break-word;
+    display: inline-block;
+    opacity: 1;
+    position: relative;
+    transition: transform 3s ease-in-out, opacity 3s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.left .stanza{
+    transform: translateX(-100%);
+    text-align: left;
+    color: black;
+    position: relative;
+   left: 5%;
+}
+
+.right .stanza {
+    transform: translateX(100%);
+    text-align: right;
+    position: relative;
+    color: darkred;
+    right: 5%;
+   
+}
+
+
+.meet {
+    transform: translateX(0%);
+}
+
+.pass { 
+transform: translateX(120%); 
+}
+
+
+.right .pass { 
+transform: translateX(-120%); 
+}
+
+@media (max-width:768px) {
+    .poem {
+        width:90%;
+    }
+.left, .right {
+    position: static;
+    text-align: center;
+}
+}
+ 

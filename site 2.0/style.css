@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: clamp(8px, 1vw, 13px);
+    align-items: center;
+    font-family: "Lucida Console", monospace;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+ .poem {
+            white-space: pre;
+            line-height: 1.5;
+            word-wrap: normal;
+        }
+
+.stanza a {
+    text-decoration: none;
+    color:inherit;
+    text-align: center;
+}
+
+.stanza a:hover {
+    text-decoration: underline;
+}
+
+.english {
+            align-self: center;
+            padding-left: 100px;
+            text-align: left;
+            width: 100%;
+            white-space: pre-wrap;
+        }
+
+.spanish {
+            align-self: center;
+            text-align: left;
+            padding-left: 10px;
+            color:darkred;
+            width: 100%;
+            white-space: pre-wrap;
+            }
+
+.flipped {
+    transform: rotate(180deg);
+}
+       
+@media (max-width:768px) {
+    .poem {
+        width:90%;
+    }
+.spanish, .right {
+    position: static;
+    text-align: center;
+    word-wrap: break-word;
+} 
